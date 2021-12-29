@@ -6,4 +6,4 @@ function textPrint() {
     text.innerText = input.value;
 }
 
-input.addEventListener('change', textPrint)
+input.addEventListener('keyup', textPrint)
