@@ -1,7 +1,6 @@
 #meme-image-container {
     width: 500px;
     height: 500px;
-    background-color: white;
 }
 
 #meme-image-container img {
@@ -29,10 +28,12 @@
 
 .default{
     border: solid 1px black;
+    background-color: white;
 }
 
 .fire {
     border: dashed 3px red;
+    background-color: red;
 }
 
 .water {
