@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,33 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>Meme Generator</h1>
     </header>
     <main>
-        <section>
-            <label for="text">Texto:</label>
-            <input type="text" name="text" id="text-input" maxlength="60">
-            <label for="image-insert">Imagem:</label>
-            <input type="file" accept="image/*" name="image-insert" id="meme-insert" value="">
-        </section>
-        <div id="meme-image-container" class="default">
-            <img id="meme-image">
-            <div class="text">
-                <p id="meme-text"></p>
+        <div class="left">
+            <section id="input">
+                <label for="text">Texto:</label>
+                <input type="text" name="text" id="text-input" maxlength="60"><br>
+                <label for="image-insert">Imagem:</label>
+                <input type="file" accept="image/*" name="image-insert" id="meme-insert"  value="">
+            </section>
+            <div id="meme-image-container" class="default">
+                <img id="meme-image">
+                <div class="text">
+                    <p id="meme-text"></p>
+                </div>
             </div>
+            <section id="buttons">
+                <button id="fire">Fire</button>
+                <button id="water">Water</button>
+                <button id="earth">Earth</button>
+            </section>
         </div>
-        <section id="buttons">
-            <button id="fire">Fire</button>
-            <button id="water">Water</button>
-            <button id="earth">Earth</button>
-        </section>
-        <section id="memes-prontos">
-            <img src="imgs/meme1.png" alt="" id="meme-1">
-            <img src="imgs/meme2.png" alt="" id="meme-2">
-            <img src="imgs/meme3.png" alt="" id="meme-3">
-            <img src="imgs/meme4.png" alt="" id="meme-4">
-        </section>
+        <div class="right">
+            <section id="memes-prontos">
+                <img src="imgs/meme1.png" alt="" id="meme-1">
+                <img src="imgs/meme2.png" alt="" id="meme-2">
+                <img src="imgs/meme3.png" alt="" id="meme-3">
+                <img src="imgs/meme4.png" alt="" id="meme-4">
+            </section>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>
