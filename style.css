@@ -10,14 +10,20 @@
   height: 500px;
 }
 
-#meme-image-container p {
+.text {
   position: relative;
   z-index: 200;
-  bottom: 20%;
+  bottom: 30%;
+  width: 400px;
+  word-wrap: break-word;
+  text-align: center;
+  margin: auto;
 }
 
 #meme-text {
     text-shadow: 5px 5px 5px black;
     font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
+    text-transform: uppercase;
 }

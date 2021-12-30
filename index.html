@@ -14,13 +14,15 @@
     <main>
         <section>
             <label for="text">Texto:</label>
-            <input type="text" name="text" id="text-input">
+            <input type="text" name="text" id="text-input" maxlength="60">
             <label for="image-insert">Imagem:</label>
             <input type="file" accept="image/*" name="image-insert" id="meme-insert" value="">
         </section>
         <div id="meme-image-container">
             <img id="meme-image">
-            <p id="meme-text"></p>
+            <div class="text">
+                <p id="meme-text"></p>
+            </div>
         </div>
     </main>
     <script src="script.js"></script>
