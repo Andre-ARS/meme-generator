@@ -5,6 +5,7 @@ const container = document.getElementById('meme-image-container')
 const fire = document.getElementById('fire');
 const water = document.getElementById('water');
 const earth = document.getElementById('earth')
+let img = document.getElementById('meme-image');
 
 // Requisito 1
 function textPrint() {
@@ -17,7 +18,6 @@ input.addEventListener('keyup', textPrint)
 // função feita com base nesse post https://stackoverflow.com/questions/22087076/how-to-make-a-simple-image-upload-using-javascript-html/45931408#45931408
 function imageUpload () {
     if (this.files[0]) {
-        let img = document.getElementById('meme-image');
         img.onload = () => {
             URL.revokeObjectURL(img.src); 
         }
@@ -31,21 +31,30 @@ file.addEventListener('change', imageUpload);
 function buttonIdentifier(event) {
    if (event.target.tagName === 'BUTTON') {
        if (event.target.innerText === 'Fire') {
-           borderChange('fire')
+           borderChange('fire');
        } else if (event.target.innerText === 'Water') {
-           borderChange('water')
+           borderChange('water');
        } else{
-           borderChange('earth')
+           borderChange('earth');
        }       
    }
 }
 
 function borderChange(classe) {
     if (container.className !== classe) {
-        container.className = classe
+        container.className = classe;
     } else {
-        container.className = 'default'
+        container.className = 'default';
     }
 }
 
-document.getElementById('buttons').addEventListener('click', buttonIdentifier)
+document.getElementById('buttons').addEventListener('click', buttonIdentifier);
+
+// Requisito 7
+function imageAttacher(event) {
+    if (event.target.tagName === 'IMG') {
+        img.src = event.target.src
+    }
+}
+
+document.getElementById('memes-prontos').addEventListener('click', imageAttacher)
