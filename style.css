@@ -2,7 +2,6 @@
     width: 500px;
     height: 500px;
     background-color: white;
-    border: solid 1px black;
 }
 
 #meme-image-container img {
@@ -26,4 +25,20 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
     text-transform: uppercase;
+}
+
+.default{
+    border: solid 1px black;
+}
+
+.fire {
+    border: dashed 3px red;
+}
+
+.water {
+    border: double 5px blue;
+}
+
+.earth {
+    border: groove 6px green;
 }
