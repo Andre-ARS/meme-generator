@@ -29,19 +29,23 @@ file.addEventListener('change', imageUpload);
 
 // Requisito 6 
 function buttonIdentifier(event) {
-    if (event.target.innerText === 'Fire') {
-        borderChange('fire')
-    } else if (event.target.innerText === 'Water') {
-        borderChange('water')
-    } else{
-        borderChange('earth')
-    }
+   if (event.target.tagName === 'BUTTON') {
+       if (event.target.innerText === 'Fire') {
+           borderChange('fire')
+       } else if (event.target.innerText === 'Water') {
+           borderChange('water')
+       } else{
+           borderChange('earth')
+       }       
+   }
 }
 
 function borderChange(classe) {
     if (container.className !== classe) {
-        
+        container.className = classe
     } else {
-        
+        container.className = 'default'
     }
 }
+
+document.getElementById('buttons').addEventListener('click', buttonIdentifier)
