@@ -28,7 +28,8 @@ function imageUpload () {
 file.addEventListener('change', imageUpload);
 
 // Requisito 6 
-function buttonIdentifier(event) {
+
+/* function buttonIdentifier(event) {
    if (event.target.tagName === 'BUTTON') {
        if (event.target.innerText === 'Fire') {
            borderChange('fire');
@@ -38,6 +39,10 @@ function buttonIdentifier(event) {
            borderChange('earth');
        }       
    }
+}*/
+
+function buttonIdentifier(event) {
+    borderChange(event.target.innerText.toLowerCase())
 }
 
 function borderChange(classe) {
